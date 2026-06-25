@@ -24,7 +24,24 @@ console.log("livro adicionado:",livro.nome)
             console.log("categoria",livro.categoria);
             console.log("estoque",livro.estoque);  
         } 
-        }
+        },
+        //3. Alugar um livro
+        aluguel(nome){
+            for(let i=0;i<this.estante.length;i++){
+                const livro=this.estante[i];
+                if(livro.nome===nome){
+                    if(livro.disponivel){
+                        livro.disponivel=false;
+                        livro.alugado=true;
+                        livro.vezesalugado++;
+                        console.log("livro alugado:",livro.nome);
+                    }else{
+                        console.log("livro indisponivel:",livro.nome);
+                    }
+                }
+            }
+        },
+
 }// biblioteca
 biblioteca.adicionarlivro(
 "a era de um deus",
@@ -36,4 +53,4 @@ biblioteca.adicionarlivro(
 
 
 biblioteca.mostrarLivros()
-   
+biblioteca.aluguel("a era de um deus");
