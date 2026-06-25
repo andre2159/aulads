@@ -12,9 +12,19 @@ const biblioteca= {
             vezesalugado:0,
         };
         this.estante.push(livro);
-console.log("livro adicionado:0",livro.nome)
+console.log("livro adicionado:",livro.nome)
 
-    }//funcao
+    },//funcao
+    //2. Mostrar todos os livros da estante
+    mostrarLivros(){
+        for(let i=0;i<this.estante.length;i++){
+            const livro=this.estante[i];
+            console.log("livro",livro.nome);
+            console.log("preço",livro.preço);
+            console.log("categoria",livro.categoria);
+            console.log("estoque",livro.estoque);  
+        } 
+        }
 }// biblioteca
 biblioteca.adicionarlivro(
 "a era de um deus",
@@ -23,3 +33,7 @@ biblioteca.adicionarlivro(
 10  
 )
 
+
+
+biblioteca.mostrarLivros()
+   
