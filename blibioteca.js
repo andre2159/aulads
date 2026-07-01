@@ -49,14 +49,14 @@ console.log("livro adicionado:",livro.nome)
                         livro.disponivel=true;
                         livro.alugado=false;
                         livro.estoque+=1.
-                        console.log("livro",+nome,+"delvovido");
+                        console.log("livro",nome,"delvovido");
                         return;}
-                        else{console.log("o",+nome,+"ja está disponivel");
+                        else{console.log("o",nome,"ja está disponivel");
                             return;
                         }
                     }
                     }
-                    console.log("o",+nome,+"não foi encontrado");
+                    console.log("o",nome,"não foi encontrado");
                 },
 removerlivro(nome){
     for(let i=0;i<this.estante.length;i++){
@@ -65,7 +65,7 @@ removerlivro(nome){
         
             const removido=this.estante[i]
             this.estante.splice(i,1);
-            console.log("livro removido",+removido.nome);
+            console.log("livro removido",removido.nome);
             return;
         }}
         console.log("livro não encontrado");
